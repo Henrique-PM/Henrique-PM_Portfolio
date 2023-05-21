@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="estilo.css"/>
+        <link rel="icon" href="Henrique.PM.png"/>
+        <title>Henrique.PM Portfolio</title>
+        
+    </head>
+
+    <body>
+        <header>
+            <div class="header">
+                <div class="logo">
+                    <img  class="logo-imagem" src="Henrique.PM.png" alt="logo site">
+                </div>
+                <div>
+                    <h1 class="titulo"> Henrique.PM Portfolio</h1>
+                </div>
+<!-- header fixo e rolagem-->
+                <script>
+
+                    $(window).scroll (function(){
+                        if ($(this).scrollTop() > 1 ){
+                            $('header').addClass("sticky");
+                        }
+                        else{
+                            $('header').removeClass("sticky");
+                        }
+                    }
+                
+                </script>
+    
+                <!-- menu-->
+                <nav class="menu"> 
+                    <ul>
+                        <li>
+                         <a href="#Sobre-mim">About Me</a>
+                        </li>
+                         <li>
+                             <a href="#Projetos">Projects</a>
+                        </li> 
+                        <li>
+                         <a href="#education">Education</a>
+                        </li>
+                        <li>
+                         <a href="#skins">Skills</a>
+                        </li> 
+                        <li>
+                         <a href="#contatos">Contact</a>
+                        </li>   
+                     </ul>
+            
+                </nav>
+            
+    
+            </div>    
+        </header>
+
+        <section>
+            <div>
+                <div class="quadrado1"></div>
+                <div class="triangulo1"></div>
+                <div class="textdiv"><p>Hi, I'm</p>
+                
+                <div id="text-auto"></div>        
+                    <script>
+                        const el = document.querySelector("#text-auto");
+                        const text = "Paulo Henrique";
+                        const interval = 300;
+
+                        function showtext(el,text,interval){
+                            const char = text.split("").reverse();
+                            const typer = setInterval(() =>{
+                                if(!char.length){
+                                    return clearInterval(typer);
+                                }
+                                const next = char.pop();
+                                el.innerHTML += next;
+                            },interval);
+                        }
+                            showtext(el,text,interval)
+                            
+                            
+                        
+                    </script>
+                <p>Front-end Developer.</p></div>
+            </div>
+            <div>
+                <div class="triangulo2"></div>
+                <div class="quadrado2"></div>
+                <div class="img">
+                    <img src="Henrique.PM.png" style="height: 450px;width: 430px;"/>
+                </div>
+
+            </div>
+        
+        </section>
+
+       
+        <div class="modoescuro">
+            <h4>Settings:</h4>
+            <button onclick="darkMode()">DarkMode</button>
+            <br><br><br>
+            <button onclick="lightMode()">LightMode</button>
+            
+
+            <script>
+                function darkMode() {
+                  var element = document.body;
+                  var content = document.getElementById("DarkModetext");
+                  element.className = "dark-mode";
+                  content.innerText = "Dark Mode is ON";
+                }
+                function lightMode() {
+                  var element = document.body;
+                  var content = document.getElementById("DarkModetext");
+                  element.className = "light-mode";
+                  content.innerText = "Dark Mode is OFF";
+                }
+              </script>
+        </div>
+    </div>    
+
+        <section>
+            <div class="textsobremim" style="background-color: rgb(22, 162, 115); width: 100%; height: 400px; position: absolute;top: 700px;">
+                 <h1 id="Sobre-mim" style="margin-top: 80px;">About me</h1>
+                <div style="width: 160px; height: 5px; background-color: rgb(255, 255, 0); position: absolute; left: 25px;
+                top: 110px;"></div>
+                    <p>
+                        I am an interested and curious individual who works well in a team. My start in the programming field is recent, but 
+                      I identify myself with the industry.That's why I always strive to improve and develop new knowledge and 
+                      programming languages in order to explore new experiences.
+                                        
+                
+                    </p>
+            </div>       
+        </section>
+
+        <section>
+            <div style="background-color: rgb(177, 30, 59); width: 100%; height: 800px; position: absolute;top: 1150px;">
+                 <h1 id="Projetos">Projects</h1>
+                <div style="width: 160px; height: 5px; background-color: rgb(255, 255, 0); position: absolute; left: 25px;
+                top: 60px;"></div>
+
+
+                <!--Projetos-->
+                <div class="Projetos">
+                   
+                    <div class="paginadelogin">
+                        <h4>Login page</h4>
+                        <a href="https://henrique-pm.github.io/Pagina-de-Login/" target="_blank"><img src="loginn.png"/></a>
+                        <div style=" height: 50px;
+                        width: 350px; margin-left:-25px ;">
+                            <p>
+                               Login and Account Creation Page with Slides.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="pmflix">
+                        <h4>PMFlix(Clone)</h4>
+                        <a href="https://henrique-pm.github.io/PMFlix/" target="_blank"><img src="PMFlix.png"/></a>
+                        <div style=" height: 50px;
+                        width: 350px; margin-left:-25px ; margin-bottom: 5px;">                       
+                            <p>
+                               A page inspired by the Netflix streaming page.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="fotografiasprojet">
+                        <h4>Photograph Library</h4>
+                        <a href="https://henrique-pm.github.io/Biblioteca-de-Fotos/" target="_blank"><img src="fotos.png"/></a>
+                        <div style=" height: 50px;
+                        width: 350px; margin-left:-25px ;">
+                            <p>
+                                Photograph Library - Under Construction
+                            </p>
+                        </div>
+                    </div>
+                    <div class="Embreve">
+                        <h4>Coming Soon </h4>
+                        <a href="#" target="_blank"><img src="Em Breve.png"/></a>
+                        <div style=" height: 50px;
+                        width: 350px; margin-left:-25px ;">
+                            <p>
+                                
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Slide com fotos do Projetos-->
+                <div class="content">
+                    <div class="slides">
+                        <!--radio buttons-->
+                        <input class="input" type="radio" name="radio-btn" id="slide1" checked/>
+                        <input class="input" type="radio" name="radio-btn" id="slide2"/>
+                        <input class="input" type="radio" name="radio-btn" id="slide3"/>
+                        <input class="input" type="radio" name="radio-btn" id="slide4"/>
+            
+                        <script>
+                            
+                            let contador = 1 ;
+            
+                            setInterval(function(){
+                                document.getElementById('slide' + contador).checked = true;
+                                contador ++;
+            
+                                if(contador > 4){
+                                    contador = 1
+                                }
+            
+                            },3000)
+            
+                        </script>
+                     
+            
+                         
+                        <div class="slide s1">
+                            <img src="cristo.jpg" alt="image1">
+                        </div>
+                        
+                        <div class="slide">
+                            <img src="urca.jpg" alt="image2">
+                        </div>
+            
+                        <div class="slide">
+                            <img src="cascata.jpg" alt="image3">
+                        </div>
+            
+                        <div class="slide">
+                            <img src="barco.jpg" alt="image4">
+                        </div>
+                    </div>
+               </div>
+            
+                        <div class="navegation">
+                
+                            <label for="slide1" class="manual-btn"></label>
+                            <label for="slide2" class="manual-btn"></label>
+                            <label for="slide3" class="manual-btn"></label>
+                            <label for="slide4" class="manual-btn"></label>
+                        </div>  
+                    
+            </div>       
+        </section>
+       
+
+
+
+        <section>
+            <div style="background-color: rgb(38, 191, 194); width: 100%; height: 650px; position: absolute;top: 2050px;">
+                 <h1 id="education" style="margin-top: 50px;">Education</h1>
+                <div style="width: 160px; height: 5px; background-color: rgb(255, 255, 0); position: absolute; left: 25px;
+                top: 80px;"></div>
+                <div class="educacao">
+                    <h3>Ensino Médio:</h3>
+                    <p style="margin-left:30px;">
+                        • Colégio Militar do Rio de Janeiro (CMRJ) ------- 2019-2021
+                    </p>
+                    
+                    <h3>Ensino Superior:</h3>
+                    <p style="margin-left:30px;">
+                        Graduando em Ciência da Computação<br>
+                        • Pontifícia Universidade Católica do Rio de Janeiro (Puc-RJ) ------- 2023-
+                    </p>
+                    <h3>Cursos e Projetos:</h3>
+                    <p style="margin-left:30px;">    
+                       • Online Course in HTML5 and CSS3 (B7-Web).<br>
+                       • Javascript Course (B7-Web).<br>
+                       • Institutional Program of Scientific Initiation Scholarships for High School (PIBIC-EM) at the Military Institute of Engineering (IME).<br>
+                        Research project titled "PRODUCTION AND CHARACTERIZATION OF CERAMIC SAMPLES FOR BALLISTIC SHIELDING" under the guidance of Dr. Marcelo Henrique Prado da Silva.
+                       • Member of the PEGASUS Competition Team (FSAE PUC-RIO) in the electronics sector.
+                    </p>
+                    <h3>Linguagem:</h3>
+                    <p style="margin-left:30px;">
+                        • English - Advanced.<br><br>
+                        • Spanish - Basic knowledge.<br><br>
+                        • French - Beginner level
+
+                    </p>
+                </div>    
+            </div>       
+        </section>
+
+
+
+        
+        <section>
+            <div style="background-color: rgb(176, 130, 255); width: 100%; height: 400px; position: absolute;top: 2750px;">
+                 <h1 id="skins" style="margin-top: 50px;">Skills</h1>
+                <div style="width: 160px; height: 5px; background-color: rgb(255, 255, 0); position: absolute; left: 25px;
+                top: 80px;"></div>
+                <div class="software">
+                    <h5><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="Imagem HTML5" style="height: 55px; width: 150px;margin-right: 10px;" ></h5>
+                    <h5><img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="Imagem CSS3" style="height: 55px; width: 150px;margin-right: 10px;" ></h5>
+                    <h5><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="Imagem Javascript" style="height: 55px; width: 150px;margin-right: 10px;" ></h5>
+                    <h5><img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Imagem Python" style="height: 55px; width: 150px;margin-right: 10px;" ></h5>
+                </div>    
+                    <h2 style="margin-left: 20px;">Beginner level</h2>
+                <div class="software"> 
+                    <h5><img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="Imagem C" style="height: 55px; width: 150px;margin-right: 10px;" ></h5>
+                </div>
+            </div>       
+        </section>
+       
+
+        <section>
+            <div  style="background-color: rgb(87, 162, 137); width: 100%; height: 380px; position: absolute;top: 3290px;">
+                 <h1 id="contatos" style="margin-top: 50px;">Contact</h1>
+                <div style="width: 160px; height: 5px; background-color: rgb(255, 255, 0); position: absolute; left: 25px;
+                top: 80px;"></div>
+
+                <div class="contato">
+                    
+                    <p style="margin-left:30px;">
+                        Paulo Henrique Lopes Monção,19<br><br>
+                        Email ---- pmoncao971@gmail.com<br><br>
+                        Phone ---- +55 (21)96785-1421<br><br>
+
+                        <a href="https://www.instagram.com/prog_henrique.pm/" target="_blank"><img  style="height: 60px; width: 65px;margin-bottom: 20px;border-radius: 30px;" src="insta2.jpeg"/></a>
+                        <a href="https://www.linkedin.com/in/paulo-henrique-mon%C3%A7%C3%A3o/" target="_blank"><img  style="height: 60px; width: 65px;margin-bottom: 20px;border-radius: 40px;" src="linkedin.jpeg"/></a>
+                        <a href="https://github.com/Henrique-PM" target="_blank"><img  style="height: 60px; width: 65px;margin-bottom: 20px;border-radius: 40px;" src="github.jpeg"/></a>
+                        <a href="https://replit.com/@PauloMoncao" target="_blank"><img  style="height: 60px; width: 125px;margin-bottom: 20px;border-radius: 30px;" src="replit.jpeg"/></a>
+                    </p>
+                      
+                </div>
+            </div>       
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>    
